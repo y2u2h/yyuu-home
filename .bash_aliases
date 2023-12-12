@@ -1,6 +1,6 @@
 # system
 alias nv="nvim"
-alias rm="mv --backup=numbered --target-directory=~/.Trash"
+alias rm="\mv --backup=numbered --target-directory=~/.Trash"
 alias trash-list="ls -ltr ~/.Trash"
 alias trash-remove="\rm -rf ~/.Trash/*"
 alias git-tag-sort="git tag -l --format='%(taggerdate) %(refname)' --sort=-taggerdate"
@@ -8,3 +8,4 @@ alias git-branch-sort="git branch -a --sort=authordate"
 alias pip-upgrade-all="pip list --outdated | tail -n +3 | awk '{ print $1 }' | xargs pip install --upgrade"
 alias docker-rm-all="docker rm \`docker ps -a -f 'status=exited' -q\`"
 alias docker-stop-all="docker stop \`docker ps -a -f 'status=running' -q\`"
+alias flake8="flake8 --config=${HOME}/.config/flake8"
