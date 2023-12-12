@@ -4,8 +4,16 @@ umask 022
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 
 # history
-export HISTSIZE=20000
-export HISTFILESIZE=40000
+export HISTSIZE=50000
+export HISTFILESIZE=100000
+export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S "
+export HISTIGNORE=$'&:ls:ll:la:ps:top:df:du'
+export PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
+shopt -u histappend
+
+# erase
+stty werase undef
+bind '"\C-w": unix-filename-rubout'
 
 # git completion / git prompt
 if [ -f /usr/share/bash-completion/bash_completion ]; then

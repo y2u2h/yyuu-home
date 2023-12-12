@@ -1,6 +1,6 @@
 # system
-alias cp="cp -i"
-alias mv="mv -i"
+alias cp="cp -iv"
+alias mv="mv -iv"
 alias nv="nvim"
 alias rm="\mv --backup=numbered --target-directory=~/.Trash"
 alias trash-list="ls -ltr ~/.Trash"
