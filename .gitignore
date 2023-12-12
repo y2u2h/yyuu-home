@@ -5,3 +5,4 @@
 !.bash_aliases
 !.gitconfig
 !.docker/config.json
+!.config/flake8
